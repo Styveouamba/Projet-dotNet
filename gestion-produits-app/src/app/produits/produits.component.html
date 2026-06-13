@@ -1,0 +1,60 @@
+<section class="produit-shell">
+  <div class="form-card">
+    <h2>{{ isEditing() ? 'Modifier un produit' : 'Ajouter un produit' }}</h2>
+    <div *ngIf="errorMessage()" class="error-message">{{ errorMessage() }}</div>
+
+    <form (ngSubmit)="saveProduit()">
+      <label>
+        Nom
+        <input type="text" [(ngModel)]="produitForm().nom" name="nom" required />
+      </label>
+
+      <label>
+        Description
+        <textarea rows="3" [(ngModel)]="produitForm().description" name="description"></textarea>
+      </label>
+
+      <div class="row">
+        <label>
+          Prix
+          <input type="number" [(ngModel)]="produitForm().prix" name="prix" min="0" step="0.01" required />
+        </label>
+        <label>
+          Quantité
+          <input type="number" [(ngModel)]="produitForm().quantite" name="quantite" min="0" required />
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="submit">{{ isEditing() ? 'Mettre à jour' : 'Créer' }}</button>
+        <button type="button" class="secondary" (click)="resetForm()">Annuler</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="table-card">
+    <h2>Liste des produits</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Quantité</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produits()">
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.prix | number: '1.2-2' }} €</td>
+          <td>{{ produit.quantite }}</td>
+          <td class="actions-cell">
+            <button type="button" (click)="startEdit(produit)">Modifier</button>
+            <button type="button" class="danger" (click)="deleteProduit(produit.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

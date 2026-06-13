@@ -1,0 +1,54 @@
+﻿<main class="app-root">
+  <header class="topbar">
+    <div>
+      <strong>Gestion Produits</strong>
+      <p>Angular + ASP.NET Core CRUD</p>
+    </div>
+  </header>
+
+  <section class="application-body">
+    <router-outlet></router-outlet>
+  </section>
+</main>
+
+<style>
+  :host {
+    display: block;
+    min-height: 100vh;
+    background: #f3f4f6;
+    color: #111827;
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  .app-root {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .topbar strong {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .topbar p {
+    margin: 0.25rem 0 0;
+    color: #4b5563;
+  }
+
+  .application-body {
+    min-height: 75vh;
+  }
+</style>

@@ -1,0 +1,112 @@
+2026-06-05 18:35:32.821 +00:00 [FTL] L'application a échoué au démarrage
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\user\Desktop\Styve\Master\angular\GestionProduits.Api\Program.cs:line 33
+2026-06-05 19:16:30.740 +00:00 [INF] Application démarrée
+2026-06-05 19:16:30.911 +00:00 [INF] Now listening on: http://localhost:5025
+2026-06-05 19:16:30.918 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 19:16:30.920 +00:00 [INF] Hosting environment: Development
+2026-06-05 19:16:30.922 +00:00 [INF] Content root path: C:\Users\user\Desktop\Styve\Master\angular\GestionProduits.Api
+2026-06-05 19:16:51.291 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5025/ - null null
+2026-06-05 19:16:51.474 +00:00 [WRN] Failed to determine the https port for redirect.
+2026-06-05 19:16:51.548 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5025/ - 404 0 null 255.5362ms
+2026-06-05 19:16:51.862 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5025/, Response status code: 404
+2026-06-05 19:16:53.650 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5025/ - null null
+2026-06-05 19:16:53.671 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5025/ - 404 0 null 9.8116ms
+2026-06-05 19:16:53.679 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5025/, Response status code: 404
+2026-06-05 19:16:54.085 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5025/ - null null
+2026-06-05 19:16:54.100 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5025/ - 404 0 null 14.9947ms
+2026-06-05 19:16:54.113 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5025/, Response status code: 404
+2026-06-05 19:18:32.640 +00:00 [INF] Application démarrée
+2026-06-05 19:18:32.891 +00:00 [INF] Now listening on: http://localhost:5025
+2026-06-05 19:18:32.906 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 19:18:32.908 +00:00 [INF] Hosting environment: Development
+2026-06-05 19:18:32.910 +00:00 [INF] Content root path: C:\Users\user\Desktop\Styve\Master\angular\GestionProduits.Api
+2026-06-05 19:18:49.767 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5025/ - null null
+2026-06-05 19:18:49.860 +00:00 [WRN] Failed to determine the https port for redirect.
+2026-06-05 19:18:49.868 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5025/ - 404 0 null 102.7333ms
+2026-06-05 19:18:49.909 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5025/, Response status code: 404
+2026-06-05 19:19:27.439 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5025/api/produits - null 0
+2026-06-05 19:19:27.474 +00:00 [INF] Executing endpoint 'GestionProduits.Api.Controllers.ProduitsController.GetProduits (GestionProduits.Api)'
+2026-06-05 19:19:27.551 +00:00 [INF] Route matched with {action = "GetProduits", controller = "Produits"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GestionProduits.Api.Models.Produit]]] GetProduits() on controller GestionProduits.Api.Controllers.ProduitsController (GestionProduits.Api).
+2026-06-05 19:19:28.083 +00:00 [INF] Récupération de tous les produits
+2026-06-05 19:19:30.725 +00:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Description", p."Nom", p."Prix", p."Quantite"
+FROM "Produits" AS p
+2026-06-05 19:19:30.836 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GestionProduits.Api.Models.Produit, GestionProduits.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-05 19:19:30.975 +00:00 [INF] Executed action GestionProduits.Api.Controllers.ProduitsController.GetProduits (GestionProduits.Api) in 3401.8318ms
+2026-06-05 19:19:30.983 +00:00 [INF] Executed endpoint 'GestionProduits.Api.Controllers.ProduitsController.GetProduits (GestionProduits.Api)'
+2026-06-05 19:19:31.007 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5025/api/produits - 200 null application/json; charset=utf-8 3567.8402ms
+2026-06-05 19:19:57.207 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5025/api/produits - null null
+2026-06-05 19:19:57.216 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:19:57.222 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5025/api/produits - 204 null null 14.5562ms
+2026-06-05 19:19:57.229 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:5025/api/produits - application/json 81
+2026-06-05 19:19:57.233 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:19:57.237 +00:00 [INF] Executing endpoint 'GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api)'
+2026-06-05 19:19:57.261 +00:00 [INF] Route matched with {action = "CreateProduit", controller = "Produits"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GestionProduits.Api.Models.Produit]] CreateProduit(GestionProduits.Api.Models.Produit) on controller GestionProduits.Api.Controllers.ProduitsController (GestionProduits.Api).
+2026-06-05 19:19:57.683 +00:00 [INF] Executed DbCommand (80ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Produits" ("Description", "Nom", "Prix", "Quantite")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2026-06-05 19:19:57.729 +00:00 [INF] Produit créé avec succès: pc portable
+2026-06-05 19:19:57.733 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'GestionProduits.Api.Models.Produit'.
+2026-06-05 19:19:57.788 +00:00 [INF] Executed action GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api) in 523.6274ms
+2026-06-05 19:19:57.793 +00:00 [INF] Executed endpoint 'GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api)'
+2026-06-05 19:19:57.803 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:5025/api/produits - 201 null application/json; charset=utf-8 572.6636ms
+2026-06-05 19:20:08.346 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5025/api/produits/1 - null null
+2026-06-05 19:20:08.353 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:08.354 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5025/api/produits/1 - 204 null null 8.5399ms
+2026-06-05 19:20:08.359 +00:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5025/api/produits/1 - application/json 88
+2026-06-05 19:20:08.364 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:08.367 +00:00 [INF] Executing endpoint 'GestionProduits.Api.Controllers.ProduitsController.UpdateProduit (GestionProduits.Api)'
+2026-06-05 19:20:08.388 +00:00 [INF] Route matched with {action = "UpdateProduit", controller = "Produits"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduit(Int32, GestionProduits.Api.Models.Produit) on controller GestionProduits.Api.Controllers.ProduitsController (GestionProduits.Api).
+2026-06-05 19:20:08.526 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Produits" SET "Description" = @p0, "Nom" = @p1, "Prix" = @p2, "Quantite" = @p3
+WHERE "Id" = @p4;
+2026-06-05 19:20:08.530 +00:00 [INF] Produit 1 mis à jour
+2026-06-05 19:20:08.538 +00:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-05 19:20:08.541 +00:00 [INF] Executed action GestionProduits.Api.Controllers.ProduitsController.UpdateProduit (GestionProduits.Api) in 149.7218ms
+2026-06-05 19:20:08.543 +00:00 [INF] Executed endpoint 'GestionProduits.Api.Controllers.ProduitsController.UpdateProduit (GestionProduits.Api)'
+2026-06-05 19:20:08.545 +00:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5025/api/produits/1 - 204 null null 185.2885ms
+2026-06-05 19:20:11.825 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5025/api/produits/1 - null null
+2026-06-05 19:20:11.839 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:11.844 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5025/api/produits/1 - 204 null null 19.1348ms
+2026-06-05 19:20:11.876 +00:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5025/api/produits/1 - null null
+2026-06-05 19:20:11.893 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:11.903 +00:00 [INF] Executing endpoint 'GestionProduits.Api.Controllers.ProduitsController.DeleteProduit (GestionProduits.Api)'
+2026-06-05 19:20:11.923 +00:00 [INF] Route matched with {action = "DeleteProduit", controller = "Produits"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteProduit(Int32) on controller GestionProduits.Api.Controllers.ProduitsController (GestionProduits.Api).
+2026-06-05 19:20:12.146 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Description", p."Nom", p."Prix", p."Quantite"
+FROM "Produits" AS p
+WHERE p."Id" = @p
+LIMIT 1
+2026-06-05 19:20:12.177 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Produits"
+WHERE "Id" = @p0;
+2026-06-05 19:20:12.186 +00:00 [INF] Produit 1 supprimé
+2026-06-05 19:20:12.188 +00:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-05 19:20:12.190 +00:00 [INF] Executed action GestionProduits.Api.Controllers.ProduitsController.DeleteProduit (GestionProduits.Api) in 260.9282ms
+2026-06-05 19:20:12.192 +00:00 [INF] Executed endpoint 'GestionProduits.Api.Controllers.ProduitsController.DeleteProduit (GestionProduits.Api)'
+2026-06-05 19:20:12.194 +00:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5025/api/produits/1 - 204 null null 317.6424ms
+2026-06-05 19:20:29.491 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5025/api/produits - null null
+2026-06-05 19:20:29.498 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:29.500 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5025/api/produits - 204 null null 9.2888ms
+2026-06-05 19:20:29.510 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:5025/api/produits - application/json 83
+2026-06-05 19:20:29.514 +00:00 [INF] CORS policy execution successful.
+2026-06-05 19:20:29.515 +00:00 [INF] Executing endpoint 'GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api)'
+2026-06-05 19:20:29.518 +00:00 [INF] Route matched with {action = "CreateProduit", controller = "Produits"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[GestionProduits.Api.Models.Produit]] CreateProduit(GestionProduits.Api.Models.Produit) on controller GestionProduits.Api.Controllers.ProduitsController (GestionProduits.Api).
+2026-06-05 19:20:29.532 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = Decimal), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Produits" ("Description", "Nom", "Prix", "Quantite")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2026-06-05 19:20:29.536 +00:00 [INF] Produit créé avec succès: pc portable
+2026-06-05 19:20:29.538 +00:00 [INF] Executing CreatedAtActionResult, writing value of type 'GestionProduits.Api.Models.Produit'.
+2026-06-05 19:20:29.541 +00:00 [INF] Executed action GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api) in 20.2954ms
+2026-06-05 19:20:29.546 +00:00 [INF] Executed endpoint 'GestionProduits.Api.Controllers.ProduitsController.CreateProduit (GestionProduits.Api)'
+2026-06-05 19:20:29.548 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:5025/api/produits - 201 null application/json; charset=utf-8 38.4055ms
+2026-06-05 19:23:16.501 +00:00 [INF] Application is shutting down...
